@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-    private int coinsCollected;
+    public int coinsCollected;
     private int coinsTotal;
     
     
@@ -16,19 +16,22 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI coinsCollectedText;
     [SerializeField] private TMPro.TextMeshProUGUI coinsRemainingText;
     [SerializeField] private TMPro.TextMeshProUGUI winText;
+    public TMPro.TextMeshProUGUI gunShopText;
 
     //Coins Count ref
     [SerializeField] private Transform coinsContainer;
 
     private void Awake()
     {
+        if (GameManager.Instance != null) return;
         Instance = this;
+        DontDestroyOnLoad(this);
     }
     
     private void Start()
     {
         coinsTotal = coinsContainer.childCount;
-        coinsRemainingText.text = $"Coins Remaining: {coinsTotal - coinsCollected}";
+        //coinsRemainingText.text = $"Coins Remaining: {coinsTotal - coinsCollected}";
     }
 
     public void AddCoin()
@@ -36,6 +39,8 @@ public class GameManager : MonoBehaviour
         // Add coin
         coinsCollected++;
         Debug.Log($"Coins: {coinsCollected}");
+
+        coinsCollectedText.gameObject.SetActive( true );
 
         if (coinsCollectedText!= null ) 
         {
