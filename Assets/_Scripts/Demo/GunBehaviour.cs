@@ -16,6 +16,12 @@ public class GunBehaviour : MonoBehaviour
         {
             Shoot();
         }
+        
+
+        /*if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }*/
     }
 
     private void Shoot()
