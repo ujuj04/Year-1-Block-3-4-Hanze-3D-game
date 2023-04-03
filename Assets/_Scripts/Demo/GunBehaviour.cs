@@ -14,7 +14,8 @@ public class GunBehaviour : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            CreateBullet(); 
+            //StartCoroutine(CreateBullet());
         }
         
 
@@ -24,10 +25,17 @@ public class GunBehaviour : MonoBehaviour
         }*/
     }
 
-    private void Shoot()
+    private void CreateBullet()
     {
         GameObject bulletClone = Instantiate(bulletPrefab, bulletPointSpawn.position, bulletPointSpawn.rotation);
 
         bulletClone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * speed);
     }
+
+    /*private IEnumerator Shoot()
+    {
+        yiled return new WaitForSeconds(0.1f);
+    }*/
+
+    
 }

@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708a50ee1f57bbb4da0e86e3417a6657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splatterPrefab: {fileID: 8415018864975884190, guid: 98aeb9c0e949d3a4d98bd71dfb8e7f51, type: 3}
+  splatterPrefab: {fileID: 3709358927820621625, guid: 1f07f0b77f4cb8641bf68378ac4832b5, type: 3}
 --- !u!54 &2618160295292360530
 Rigidbody:
   m_ObjectHideFlags: 0
