@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GunBehaviour : MonoBehaviour
@@ -9,13 +10,19 @@ public class GunBehaviour : MonoBehaviour
     [SerializeField] private Transform bulletPointSpawn;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float speed = 500.0f;
+    [SerializeField] private float cooldown = 0.25f;
+    private float timer = 0;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        timer += Time.deltaTime;
+        if (Input.GetMouseButton(0))
         {
-            CreateBullet(); 
-            //StartCoroutine(CreateBullet());
+            if (timer > cooldown)
+            {
+                CreateBullet();
+                timer = 0;
+            }
         }
         
 
