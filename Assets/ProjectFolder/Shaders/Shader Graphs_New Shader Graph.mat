@@ -47,26 +47,27 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Base_Scale: 0.02
-    - _Base_Speed: 14
-    - _Base_Strength: 2
-    - _Curvature_Radius: 242.35
-    - _Emission_Strength: 1
-    - _Fresnel_Opacity: 0.32
-    - _Fresnel_Power: 6.03
+    - _Base_Scale: 0.005
+    - _Base_Speed: 20
+    - _Base_Strength: 2.52
+    - _Curvature_Radius: 551.2
+    - _Emission_Strength: 9.9
+    - _Fade_Depth: 200
+    - _Fresnel_Opacity: 0.6
+    - _Fresnel_Power: 6.91
     - _Noice_Height: 55.15
-    - _Noise_Edge_1: -0.75
-    - _Noise_Edge_2: 1.48
+    - _Noise_Edge_1: -3.83
+    - _Noise_Edge_2: 4.43
     - _Noise_Float: 10
-    - _Noise_Height: 28.1
-    - _Noise_Power: 1.78
+    - _Noise_Height: 30
+    - _Noise_Power: 3.9
     - _Noise_Scale: 0.02
-    - _Noise_Speed: 4.1
+    - _Noise_Speed: 30
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color_Peak: {r: 0.8591136, g: 0.9245283, b: 0.9245283, a: 0}
-    - _Color_Valley: {r: 0.18729973, g: 0.55821455, b: 0.6509434, a: 0}
+    - _Color_Peak: {r: 0.76358134, g: 0.8396226, b: 0.8396226, a: 0}
+    - _Color_Valley: {r: 0.6006586, g: 0.76370764, b: 0.8018868, a: 0}
     - _Noise_Remap: {r: 0, g: 1, b: -0.3, a: 2.7}
     - _Rotate_Projection: {r: 1, g: 0, b: 0, a: 90}
   m_BuildTextureStacks: []
