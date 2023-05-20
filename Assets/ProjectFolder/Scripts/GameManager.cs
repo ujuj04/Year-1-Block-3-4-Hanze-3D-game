@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    [SerializeField] private GameObject player;
+    public bool isDay = true;
+    
+    
     public int coinsCollected;
     private int coinsTotal;
     
@@ -16,6 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI coinsCollectedText;
     [SerializeField] private TMPro.TextMeshProUGUI coinsRemainingText;
     [SerializeField] private TMPro.TextMeshProUGUI winText;
+    
     public TMPro.TextMeshProUGUI gunShopText;
 
     //Coins Count ref
@@ -26,6 +31,7 @@ public class GameManager : MonoBehaviour
         if (GameManager.Instance != null) return;
         Instance = this;
         DontDestroyOnLoad(this);
+        DontDestroyOnLoad(player);
     }
     
     private void Start()
