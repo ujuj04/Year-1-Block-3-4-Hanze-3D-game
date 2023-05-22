@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ProjectFolder/Scenes/FlyingDutchman/Main Menu.unity
+    path: Assets/ProjectFolder/Scenes/FlyingDutchman/Hub.unity
     guid: c6ae10e2804afb14bb798a53c4522d30
   - enabled: 1
     path: Assets/ProjectFolder/Scenes/FlyingDutchman/DayTime.unity

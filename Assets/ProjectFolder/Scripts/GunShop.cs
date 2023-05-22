@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
@@ -28,3 +28,4 @@ public class GunShop : MonoBehaviour
         GameManager.Instance.gunShopText.gameObject.SetActive(false);
     }
 }
+*/

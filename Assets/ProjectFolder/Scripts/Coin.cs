@@ -12,7 +12,7 @@ public class Coin : MonoBehaviour
             Destroy(this.transform.parent.gameObject);
 
             // Add points
-            GameManager.Instance.AddCoin();
+            //GameManager.Instance.AddCoin();
         }
     }
 }
