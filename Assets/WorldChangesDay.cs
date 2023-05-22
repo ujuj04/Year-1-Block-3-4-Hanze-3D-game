@@ -9,18 +9,30 @@ public class WorldChangesDay : MonoBehaviour
     //[SerializeField] public SceneInfo sceneInfo;
     [SerializeField] public GameManager gameManager;
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+
     void Start()
     {
         
     }
 
-    private void Update()
+
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (gameManager.isDay == true) 
+        if (gameManager.isDay == true)
         {
             //bridge
             if (GameObject.Find("Bridge"))
-                if (!gameManager.isBridgeBuilt) 
+                if (!gameManager.isBridgeBuilt)
                 {
                     GameObject.Find("Bridge").SetActive(false);
                 }
