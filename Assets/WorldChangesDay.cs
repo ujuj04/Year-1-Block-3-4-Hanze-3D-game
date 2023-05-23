@@ -28,18 +28,18 @@ public class WorldChangesDay : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (gameManager.isDay == true)
-        {
-            //bridge
-            if (GameObject.Find("Bridge"))
-                if (!gameManager.isBridgeBuilt)
-                {
-                    GameObject.Find("Bridge").SetActive(false);
-                }
-                else
-                {
-                    GameObject.Find("Bridge").SetActive(true);
-                }
-        }
+        bool isDay = gameManager.isDay;
+
+        //bridge
+        if (GameObject.Find("Bridge"))
+            if (!gameManager.isBridgeBuilt)
+            {
+                GameObject.Find("Bridge").SetActive(false);
+            }
+            else
+            {
+                GameObject.Find("Bridge").SetActive(true);
+            }
+        
     }
 }

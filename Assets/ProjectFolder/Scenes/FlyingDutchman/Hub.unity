@@ -1611,7 +1611,7 @@ GameObject:
   - component: {fileID: 2029088666}
   - component: {fileID: 2029088665}
   m_Layer: 0
-  m_Name: WorldChangesDay
+  m_Name: WorldChanges
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
