@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class WorldChangesDay : MonoBehaviour
+public class WorldChanges : MonoBehaviour
 {
 
     //[SerializeField] public SceneInfo sceneInfo;
@@ -28,18 +28,15 @@ public class WorldChangesDay : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (gameManager.isDay == true)
-        {
-            //bridge
-            if (GameObject.Find("Bridge"))
-                if (!gameManager.isBridgeBuilt)
-                {
-                    GameObject.Find("Bridge").SetActive(false);
-                }
-                else
-                {
-                    GameObject.Find("Bridge").SetActive(true);
-                }
-        }
+        //bridge
+        if (GameObject.Find("Bridge"))
+            if (!gameManager.isBridgeBuilt)
+            {
+                GameObject.Find("Bridge").SetActive(false);
+            }
+            else
+            {
+                GameObject.Find("Bridge").SetActive(true);
+            }
     }
 }
