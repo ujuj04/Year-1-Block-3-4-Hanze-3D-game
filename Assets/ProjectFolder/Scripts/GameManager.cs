@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject worldChangesDay;
     public bool isDay = true;
     public bool isBridgeBuilt = false;
-    
+    public bool isGuardBribed = false;
+
 
     private void Awake()
     {
@@ -30,11 +31,22 @@ public class GameManager : MonoBehaviour
     //Bridge Vars setup for Dialogue System
     public bool GetIsBridgeBuilt() { return isBridgeBuilt; }
     public void SetIsBridgeBuilt(bool value) { isBridgeBuilt = value; }
+
+    // Var for Guard (get Magic clock Quest)
+    public void SetIsGuardBribed(bool value) { isGuardBribed = value; }
+
+    //Teleport from hub to Flying Dutchman
+    public void TpToFlyingDutchman() { SceneManager.LoadScene("DayTime"); }
+
     private void OnEnable()
     {
         Lua.RegisterFunction("GetIsBridgeBuilt", this, SymbolExtensions.GetMethodInfo(() => GetIsBridgeBuilt()));
         Lua.RegisterFunction("SetIsBridgeBuilt", this, SymbolExtensions.GetMethodInfo(() => SetIsBridgeBuilt(false)));
+        Lua.RegisterFunction("SetIsGuardBribed", this, SymbolExtensions.GetMethodInfo(() => SetIsGuardBribed(false)));
+        Lua.RegisterFunction("TpToFlyingDutchman", this, SymbolExtensions.GetMethodInfo(() => TpToFlyingDutchman()));
     }
+
+    
 
 
 }

@@ -20,3 +20,9 @@ MonoBehaviour:
   - functionName: SetIsBridgeBuilt
     parameters: 00000000
     returnValue: 0
+  - functionName: TpToFlyingDutchman
+    parameters: 
+    returnValue: 0
+  - functionName: SetIsGuardBribed
+    parameters: 00000000
+    returnValue: 0

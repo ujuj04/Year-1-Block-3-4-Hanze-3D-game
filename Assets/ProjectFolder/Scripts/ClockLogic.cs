@@ -8,11 +8,6 @@ public class ClockLogic : MonoBehaviour
 {
     //[SerializeField] public SceneInfo sceneInfo; 
     [SerializeField] public GameManager gameManager;
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         //Move between Day/Night Scenes
