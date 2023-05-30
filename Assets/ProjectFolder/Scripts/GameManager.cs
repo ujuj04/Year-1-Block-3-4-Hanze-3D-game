@@ -12,9 +12,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject dialogueManager;
     [SerializeField] private GameObject worldChangesDay;
+    [SerializeField] private GameObject magicClock;
     public bool isDay = true;
     public bool isBridgeBuilt = false;
     public bool isGuardBribed = false;
+    public bool IsGotQuackityCheck = false;
+    public bool IsGuardTp = false;
+    public bool IsGotMagicClockCheck = false;
+    Vector3 guardPos;
 
 
     private void Awake()
@@ -28,7 +33,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    //Bridge Vars setup for Dialogue System
+    // Vars Bridge 
     public bool GetIsBridgeBuilt() { return isBridgeBuilt; }
     public void SetIsBridgeBuilt(bool value) { isBridgeBuilt = value; }
 
@@ -38,103 +43,38 @@ public class GameManager : MonoBehaviour
     //Teleport from hub to Flying Dutchman
     public void TpToFlyingDutchman() { SceneManager.LoadScene("DayTime"); }
 
+    //Teleport the guard and save var
+    public void TpGuard() 
+    {
+        guardPos = GameObject.Find("NPC_Dutchman_Guardian").transform.position;
+        guardPos.x = 5 - 41.49208f;
+        GameObject.Find("NPC_Dutchman_Guardian").transform.position = guardPos;
+    }
+    public void SetIsGuardTp(bool value) { IsGuardTp = value; }
+
+    //Var for rubber ducky
+    public void SetIsGotQuackityCheck(bool value) { IsGotQuackityCheck = value; }
+
+    //Var for collecting the magic clock
+    public void SetIsGotMagicClockCheck(bool value) { IsGotMagicClockCheck = value; }
+
+    //Activate the magic clock
+    public void ActivateMagicClock() 
+    {
+        magicClock.SetActive(true);
+    }
+
+    //Methods transition to Lua
     private void OnEnable()
     {
         Lua.RegisterFunction("GetIsBridgeBuilt", this, SymbolExtensions.GetMethodInfo(() => GetIsBridgeBuilt()));
         Lua.RegisterFunction("SetIsBridgeBuilt", this, SymbolExtensions.GetMethodInfo(() => SetIsBridgeBuilt(false)));
         Lua.RegisterFunction("SetIsGuardBribed", this, SymbolExtensions.GetMethodInfo(() => SetIsGuardBribed(false)));
         Lua.RegisterFunction("TpToFlyingDutchman", this, SymbolExtensions.GetMethodInfo(() => TpToFlyingDutchman()));
+        Lua.RegisterFunction("TpGuard", this, SymbolExtensions.GetMethodInfo(() => TpGuard()));
+        Lua.RegisterFunction("SetIsGotQuackityCheck", this, SymbolExtensions.GetMethodInfo(() => SetIsGotQuackityCheck(false)));
+        Lua.RegisterFunction("SetIsGuardTp", this, SymbolExtensions.GetMethodInfo(() => SetIsGuardTp(false)));
+        Lua.RegisterFunction("SetIsGotMagicClockCheck", this, SymbolExtensions.GetMethodInfo(() => SetIsGotMagicClockCheck(false)));
+        Lua.RegisterFunction("ActivateMagicClock", this, SymbolExtensions.GetMethodInfo(() => ActivateMagicClock()));
     }
-
-    
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-//Stuff I'm probably not gonna use anyway
-
-
-/*public int coinsCollected;
-    private int coinsTotal;*/
-
-
-// UI ref
-//[SerializeField] private TMPro.TextMeshProUGUI coinsCollectedText;
-//[SerializeField] private TMPro.TextMeshProUGUI coinsRemainingText;
-//[SerializeField] private TMPro.TextMeshProUGUI winText;
-
-
-//public TMPro.TextMeshProUGUI gunShopText;
-
-//Coins Count ref
-//[SerializeField] private Transform coinsContainer;
-
-/* private void Start()
- {
-     if (GameObject.Find("coinsContainer") != null)
-         coinsTotal = coinsContainer.childCount;
-     //coinsRemainingText.text = $"Coins Remaining: {coinsTotal - coinsCollected}";
- }*/
-
-
-
-
-
-
-
-
-/*public void AddCoin()
-{
-    // Add coin
-    coinsCollected++;
-    Debug.Log($"Coins: {coinsCollected}");
-
-    coinsCollectedText.gameObject.SetActive( true );
-
-    if (coinsCollectedText!= null ) 
-    {
-        coinsCollectedText.text = $"Coins Collected: {coinsCollected}";
-    }
-
-    if (coinsRemainingText!= null ) 
-    {
-        coinsRemainingText.text = $"Coins Remaining: {coinsTotal - coinsCollected}";
-    }
-
-    if (coinsCollected == coinsTotal)
-    {
-        //StartCoroutine(EndGame());
-    }
-
-
-
-
-    // Update UI
-
-    // If all coins collected, end game.
-}
-
-private IEnumerator EndGame()
-{
-    if (winText!= null)
-    {
-        winText.text = "You Won!";
-        winText.gameObject.SetActive(true);
-    }
-
-    yield return new WaitForSeconds(2);
-
-    yield return null;
-
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-}*/

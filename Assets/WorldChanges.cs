@@ -8,7 +8,6 @@ public class WorldChanges : MonoBehaviour
 
     //[SerializeField] public SceneInfo sceneInfo;
     [SerializeField] public GameManager gameManager;
-    Vector3 guardPos;
 
     private void OnEnable()
     {
@@ -36,20 +35,38 @@ public class WorldChanges : MonoBehaviour
             }
         }
 
-        //guard (get magic clock quest)
+        //guard teleportation
         if (GameObject.Find("NPC_Dutchman_Guardian"))
         {
-            if (!gameManager.isGuardBribed)
+            if (gameManager.IsGuardTp)
             {
-                guardPos = GameObject.Find("NPC_Dutchman_Guardian").transform.position;
-                guardPos.x = 4 - 41.49208f;
-                GameObject.Find("NPC_Dutchman_Guardian").transform.position = guardPos;
+                gameManager.TpGuard();
+            }
+        }
+
+        //rubber ducky
+        if (GameObject.Find("NPC_Dutchman_Quacketty"))
+        {
+            if (!gameManager.IsGotQuackityCheck)
+            {
+                GameObject.Find("NPC_Dutchman_Quacketty").SetActive(true);
             }
             else
             {
-                guardPos = GameObject.Find("NPC_Dutchman_Guardian").transform.position;
-                guardPos.x = 5 - 41.49208f;
-                GameObject.Find("NPC_Dutchman_Guardian").transform.position = guardPos;
+                GameObject.Find("NPC_Dutchman_Quacketty").SetActive(false);
+            }
+        }
+        
+        //magic clock collect
+        if (GameObject.Find("NPC_Object_Magic_Clock_Collect"))
+        {
+            if (!gameManager.IsGotMagicClockCheck)
+            {
+                GameObject.Find("NPC_Object_Magic_Clock_Collect").SetActive(true);
+            }
+            else
+            {
+                GameObject.Find("NPC_Object_Magic_Clock_Collect").SetActive(false);
             }
         }
     }

@@ -647,12 +647,12 @@ GameObject:
   - component: {fileID: 719667163}
   - component: {fileID: 719667164}
   m_Layer: 0
-  m_Name: Clock
+  m_Name: Magic_Clock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &719667163
 Transform:
   m_ObjectHideFlags: 0
@@ -924,8 +924,13 @@ MonoBehaviour:
   player: {fileID: 1964169138}
   dialogueManager: {fileID: 854439330}
   worldChangesDay: {fileID: 2029088664}
+  magicClock: {fileID: 719667162}
   isDay: 1
   isBridgeBuilt: 0
+  isGuardBribed: 0
+  IsGotQuackityCheck: 0
+  IsGuardTp: 0
+  IsGotMagicClockCheck: 0
 --- !u!4 &1010444301
 Transform:
   m_ObjectHideFlags: 0

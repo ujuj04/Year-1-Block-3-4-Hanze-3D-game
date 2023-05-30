@@ -26,3 +26,18 @@ MonoBehaviour:
   - functionName: SetIsGuardBribed
     parameters: 00000000
     returnValue: 0
+  - functionName: TpGuard
+    parameters: 
+    returnValue: 0
+  - functionName: SetIsGotQuackityCheck
+    parameters: 00000000
+    returnValue: 0
+  - functionName: SetIsGuardTp
+    parameters: 00000000
+    returnValue: 0
+  - functionName: SetIsGotMagicClockCheck
+    parameters: 00000000
+    returnValue: 0
+  - functionName: ActivateMagicClock
+    parameters: 
+    returnValue: 0
