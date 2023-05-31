@@ -22,16 +22,18 @@ public class WorldChanges : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        //bridge
-        if (GameObject.Find("Bridge"))
+        //bridges
+        if (GameObject.Find("Bridge(1)") && GameObject.Find("Bridge(2)"))
         {
             if (!gameManager.isBridgeBuilt)
             {
-                GameObject.Find("Bridge").SetActive(false);
+                GameObject.Find("Bridge(1)").SetActive(false);
+                GameObject.Find("Bridge(2)").SetActive(false);
             }
             else
             {
-                GameObject.Find("Bridge").SetActive(true);
+                GameObject.Find("Bridge(1)").SetActive(true);
+                GameObject.Find("Bridge(2)").SetActive(true);
             }
         }
 
@@ -67,6 +69,19 @@ public class WorldChanges : MonoBehaviour
             else
             {
                 GameObject.Find("NPC_Object_Magic_Clock_Collect").SetActive(false);
+            }
+        }
+
+        //key collect
+        if (GameObject.Find("NPC_Object_Key"))
+        {
+            if (!gameManager.IsGotKey)
+            {
+                GameObject.Find("NPC_Object_Key").SetActive(true);
+            }
+            else
+            {
+                GameObject.Find("NPC_Object_Key").SetActive(false);
             }
         }
     }

@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public bool IsGotQuackityCheck = false;
     public bool IsGuardTp = false;
     public bool IsGotMagicClockCheck = false;
+    public bool IsGotKey = false;
     Vector3 guardPos;
 
 
@@ -47,7 +48,7 @@ public class GameManager : MonoBehaviour
     public void TpGuard() 
     {
         guardPos = GameObject.Find("NPC_Dutchman_Guardian").transform.position;
-        guardPos.x = 5 - 41.49208f;
+        guardPos.x = 5.5f - 41.49208f;
         GameObject.Find("NPC_Dutchman_Guardian").transform.position = guardPos;
     }
     public void SetIsGuardTp(bool value) { IsGuardTp = value; }
@@ -64,6 +65,12 @@ public class GameManager : MonoBehaviour
         magicClock.SetActive(true);
     }
 
+    //Var for key
+    public void SetIsGotKey(bool value) { IsGotKey = value; }
+
+    //Time check
+    public bool GetDay() { return isDay; }
+
     //Methods transition to Lua
     private void OnEnable()
     {
@@ -76,5 +83,7 @@ public class GameManager : MonoBehaviour
         Lua.RegisterFunction("SetIsGuardTp", this, SymbolExtensions.GetMethodInfo(() => SetIsGuardTp(false)));
         Lua.RegisterFunction("SetIsGotMagicClockCheck", this, SymbolExtensions.GetMethodInfo(() => SetIsGotMagicClockCheck(false)));
         Lua.RegisterFunction("ActivateMagicClock", this, SymbolExtensions.GetMethodInfo(() => ActivateMagicClock()));
+        Lua.RegisterFunction("GetDay", this, SymbolExtensions.GetMethodInfo(() => GetDay()));
+        Lua.RegisterFunction("SetIsGotKey", this, SymbolExtensions.GetMethodInfo(() => SetIsGotKey(false)));
     }
 }
