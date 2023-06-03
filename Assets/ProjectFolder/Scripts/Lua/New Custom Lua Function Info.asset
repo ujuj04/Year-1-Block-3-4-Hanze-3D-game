@@ -16,6 +16,9 @@ MonoBehaviour:
   - functionName: GetDay
     parameters: 
     returnValue: 1
+  - functionName: GetIsDeathZone
+    parameters: 
+    returnValue: 1
   scriptFunctions:
   - functionName: SetIsBridgeBuilt
     parameters: 00000000
@@ -48,5 +51,8 @@ MonoBehaviour:
     parameters: 
     returnValue: 0
   - functionName: TpFromCaptainDream
+    parameters: 
+    returnValue: 0
+  - functionName: EndGame
     parameters: 
     returnValue: 0

@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using PixelCrushers.DialogueSystem;
+using System.Text.RegularExpressions;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject dialogueManager;
     [SerializeField] private GameObject worldChangesDay;
     [SerializeField] private GameObject magicClock;
+    [SerializeField] private GameObject deathZone;
+    [SerializeField] GameObject capsule;
     public bool isDay = true;
     public bool mazeIsDay = true;
     public bool isBridgeBuilt = false;
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour
     public bool IsGuardTp = false;
     public bool IsGotMagicClockCheck = false;
     public bool IsGotKey = false;
+    public bool IsDeathZone = false;
     Vector3 guardPos;
     Vector3 playerDreamPos;
 
@@ -33,6 +37,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(player);
         DontDestroyOnLoad(dialogueManager);
         DontDestroyOnLoad(worldChangesDay);
+        DontDestroyOnLoad(deathZone);
+        Application.targetFrameRate = 60;
     }
 
 
@@ -79,10 +85,22 @@ public class GameManager : MonoBehaviour
     //Tp from captain's dream
     public void TpFromCaptainDream()
     {
-        playerDreamPos = player.transform.position;
-        playerDreamPos.z = -2f;
-        player.transform.position = playerDreamPos;
         SceneManager.LoadScene("NightTime");
+        capsule.SetActive(false);
+        capsule.transform.position = new Vector3(-68f, 1.2f, -5f);
+        capsule.SetActive(true);
+    }
+
+    //Var for DeathZone
+    public bool GetIsDeathZone() { return IsDeathZone; }
+
+    //Tp player to the end game
+    public void EndGame()
+    {
+        SceneManager.LoadScene("Hub");
+        capsule.SetActive(false);
+        capsule.transform.position = new Vector3(-37.15f, 12.86f, -20.01f);
+        capsule.SetActive(true);
     }
 
     //Methods transition to Lua
@@ -101,5 +119,7 @@ public class GameManager : MonoBehaviour
         Lua.RegisterFunction("SetIsGotKey", this, SymbolExtensions.GetMethodInfo(() => SetIsGotKey(false)));
         Lua.RegisterFunction("TpToCaptainDream", this, SymbolExtensions.GetMethodInfo(() => TpToCaptainDream()));
         Lua.RegisterFunction("TpFromCaptainDream", this, SymbolExtensions.GetMethodInfo(() => TpFromCaptainDream()));
+        Lua.RegisterFunction("GetIsDeathZone", this, SymbolExtensions.GetMethodInfo(() => GetIsDeathZone()));
+        Lua.RegisterFunction("EndGame", this, SymbolExtensions.GetMethodInfo(() => EndGame()));
     }
 }

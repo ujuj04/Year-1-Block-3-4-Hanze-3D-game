@@ -23,17 +23,15 @@ public class WorldChanges : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         //bridges
-        if (GameObject.Find("Bridge(1)") && GameObject.Find("Bridge(2)"))
+        if (GameObject.Find("Bridge(1)"))
         {
             if (!gameManager.isBridgeBuilt)
             {
                 GameObject.Find("Bridge(1)").SetActive(false);
-                GameObject.Find("Bridge(2)").SetActive(false);
             }
             else
             {
                 GameObject.Find("Bridge(1)").SetActive(true);
-                GameObject.Find("Bridge(2)").SetActive(true);
             }
         }
 
