@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject worldChangesDay;
     [SerializeField] private GameObject magicClock;
     public bool isDay = true;
+    public bool mazeIsDay = true;
     public bool isBridgeBuilt = false;
     public bool isGuardBribed = false;
     public bool IsGotQuackityCheck = false;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     public bool IsGotMagicClockCheck = false;
     public bool IsGotKey = false;
     Vector3 guardPos;
+    Vector3 playerDreamPos;
 
 
     private void Awake()
@@ -71,6 +73,18 @@ public class GameManager : MonoBehaviour
     //Time check
     public bool GetDay() { return isDay; }
 
+    //Tp to captain's dream
+    public void TpToCaptainDream() { SceneManager.LoadScene("Maze_DayTime"); }
+
+    //Tp from captain's dream
+    public void TpFromCaptainDream()
+    {
+        playerDreamPos = player.transform.position;
+        playerDreamPos.z = -2f;
+        player.transform.position = playerDreamPos;
+        SceneManager.LoadScene("NightTime");
+    }
+
     //Methods transition to Lua
     private void OnEnable()
     {
@@ -85,5 +99,7 @@ public class GameManager : MonoBehaviour
         Lua.RegisterFunction("ActivateMagicClock", this, SymbolExtensions.GetMethodInfo(() => ActivateMagicClock()));
         Lua.RegisterFunction("GetDay", this, SymbolExtensions.GetMethodInfo(() => GetDay()));
         Lua.RegisterFunction("SetIsGotKey", this, SymbolExtensions.GetMethodInfo(() => SetIsGotKey(false)));
+        Lua.RegisterFunction("TpToCaptainDream", this, SymbolExtensions.GetMethodInfo(() => TpToCaptainDream()));
+        Lua.RegisterFunction("TpFromCaptainDream", this, SymbolExtensions.GetMethodInfo(() => TpFromCaptainDream()));
     }
 }

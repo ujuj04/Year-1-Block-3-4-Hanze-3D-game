@@ -14,5 +14,9 @@ public class MainMenuLogic : MonoBehaviour
         {
             SceneManager.LoadScene("DayTime");
         }
+        if (Input.GetKey(KeyCode.Keypad0))
+        {
+            SceneManager.LoadScene("Maze_DayTime");
+        }
     }
 }

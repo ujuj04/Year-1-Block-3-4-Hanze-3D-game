@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ProjectFolder/Scenes/FlyingDutchman/NightTime.unity
     guid: 8f65406c15b29c344a0c807d893dd7c7
+  - enabled: 1
+    path: Assets/ProjectFolder/Scenes/FlyingDutchman/Maze_NightTime.unity
+    guid: f75585dd9f623954a9bd9dccf53908a6
+  - enabled: 1
+    path: Assets/ProjectFolder/Scenes/FlyingDutchman/Maze_DayTime.unity
+    guid: c2babe28bbdbb2d4c988af7291481231
   m_configObjects: {}

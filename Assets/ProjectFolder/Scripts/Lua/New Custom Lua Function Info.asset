@@ -44,3 +44,9 @@ MonoBehaviour:
   - functionName: SetIsGotKey
     parameters: 00000000
     returnValue: 0
+  - functionName: TpToCaptainDream
+    parameters: 
+    returnValue: 0
+  - functionName: TpFromCaptainDream
+    parameters: 
+    returnValue: 0
