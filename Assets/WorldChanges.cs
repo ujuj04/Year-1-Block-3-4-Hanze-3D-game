@@ -71,15 +71,15 @@ public class WorldChanges : MonoBehaviour
         }
 
         //key collect
-        if (GameObject.Find("NPC_Object_Key"))
+        if (GameObject.Find("Gold_Key"))
         {
             if (!gameManager.IsGotKey)
             {
-                GameObject.Find("NPC_Object_Key").SetActive(true);
+                GameObject.Find("Gold_Key").SetActive(true);
             }
             else
             {
-                GameObject.Find("NPC_Object_Key").SetActive(false);
+                GameObject.Find("Gold_Key").SetActive(false);
             }
         }
     }

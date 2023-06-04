@@ -12,7 +12,7 @@ public class DeathZone : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene("Hub");
+        SceneManager.LoadScene("DeathZone");
         capsule.SetActive(false);
         capsule.transform.position = new Vector3(-37.15f, 12.86f, -20.01f);
         capsule.SetActive(true);
