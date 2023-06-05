@@ -2182,12 +2182,6 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 2
-        originDialogueID: 1
-        destinationConversationID: 2
-        destinationDialogueID: 81
-        isConnector: 0
-        priority: 2
       conditionsString: Variable["isGotMagicClock"] == false and (Variable["isDutchmanCaptainWaitingForResults"]
         == false)
       userScript: 
@@ -6465,55 +6459,6 @@ MonoBehaviour:
         y: 722
         width: 160
         height: 30
-    - id: 81
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[Testing]'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 2
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: EndGame()
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 288
-        y: 218
-        width: 160
-        height: 30
     - id: 82
       fields:
       - title: Title
@@ -6620,7 +6565,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 334.4596}
+    canvasScrollPosition: {x: 1.369873, y: 0}
     canvasZoom: 0.73000026
   - id: 3
     fields:
@@ -7049,7 +6994,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: GetIsBridgeBuilt()  == false and and (Variable["isDutchmanCaptainWaitingForResults"]
+      conditionsString: GetIsBridgeBuilt()  == false and (Variable["isDutchmanCaptainWaitingForResults"]
         == true)
       userScript: 
       onExecute:
@@ -8533,7 +8478,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 86.001495, y: 0}
+    canvasScrollPosition: {x: 0, y: 36.476017}
     canvasZoom: 0.8800001
   - id: 5
     fields:
@@ -15774,7 +15719,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1224
+        x: 1328
         y: 50
         width: 160
         height: 30
@@ -18098,7 +18043,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: (The captain is sleeping)
+        value: (The captain is fighting his inner demons.)
         type: 0
         typeString: 
       - title: Sequence
@@ -18122,7 +18067,7 @@ MonoBehaviour:
       - originConversationID: 9
         originDialogueID: 46
         destinationConversationID: 9
-        destinationDialogueID: 48
+        destinationDialogueID: 96
         isConnector: 0
         priority: 2
       - originConversationID: 9
@@ -18138,7 +18083,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2056
+        x: 2160
         y: 134
         width: 160
         height: 30
@@ -18243,7 +18188,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1952
-        y: 218
+        y: 386
         width: 160
         height: 30
     - id: 49
@@ -18269,7 +18214,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: (You get hit in the face by the captain)
+        value: (You get hit right in the face)
         type: 0
         typeString: 
       - title: Sequence
@@ -18298,7 +18243,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1952
-        y: 302
+        y: 470
         width: 160
         height: 30
     - id: 50
@@ -18353,7 +18298,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1952
-        y: 386
+        y: 554
         width: 160
         height: 30
     - id: 51
@@ -18379,8 +18324,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: (Apparently his reflexes are at their peak even in his sleep, no wonder
-          he is the captain)
+        value: (The captain continues shadow boxing.)
         type: 0
         typeString: 
       - title: Sequence
@@ -18409,7 +18353,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1952
-        y: 470
+        y: 638
         width: 160
         height: 30
     - id: 52
@@ -18435,7 +18379,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Are you awake?
+        value: Why are you doing this?
         type: 0
         typeString: 
       - title: Sequence
@@ -18464,7 +18408,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1952
-        y: 554
+        y: 722
         width: 160
         height: 30
     - id: 53
@@ -18490,7 +18434,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: (He mumbles something rather offensive in his sleep)
+        value: (He mumbles something rather offensive and continues his night training.)
         type: 0
         typeString: 
       - title: Sequence
@@ -18519,7 +18463,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1952
-        y: 638
+        y: 806
         width: 160
         height: 30
     - id: 54
@@ -19619,7 +19563,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2264
+        x: 2472
         y: 218
         width: 160
         height: 30
@@ -19646,7 +19590,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: (The clock is vibrating when you get close to the captain)
+        value: (It starts vibrating when you get close to the captain.)
         type: 0
         typeString: 
       - title: Sequence
@@ -19680,7 +19624,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2264
+        x: 2472
         y: 302
         width: 160
         height: 30
@@ -19729,121 +19673,11 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2160
+        x: 2368
         y: 386
         width: 160
         height: 30
     - id: 76
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 10
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[See what the clock has to say]'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 9
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 9
-        originDialogueID: 76
-        destinationConversationID: 9
-        destinationDialogueID: 77
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2368
-        y: 386
-        width: 160
-        height: 30
-    - id: 77
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 10
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: (The clock starts vibrating even more. It's trying to tell you something.)
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 9
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 9
-        originDialogueID: 77
-        destinationConversationID: 9
-        destinationDialogueID: 78
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 2368
-        y: 470
-        width: 160
-        height: 30
-    - id: 78
       fields:
       - title: Title
         value: 
@@ -19882,7 +19716,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 9
-        originDialogueID: 78
+        originDialogueID: 76
         destinationConversationID: 9
         destinationDialogueID: 79
         isConnector: 0
@@ -19894,8 +19728,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 554
+        x: 2576
+        y: 386
         width: 160
         height: 30
     - id: 79
@@ -19951,8 +19785,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 638
+        x: 2576
+        y: 470
         width: 160
         height: 30
     - id: 80
@@ -20006,8 +19840,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 722
+        x: 2576
+        y: 554
         width: 160
         height: 30
     - id: 81
@@ -20061,8 +19895,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 806
+        x: 2576
+        y: 638
         width: 160
         height: 30
     - id: 82
@@ -20088,7 +19922,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: What are you trying to do?
+        value: Then what to we do?
         type: 0
         typeString: 
       - title: Sequence
@@ -20116,8 +19950,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 890
+        x: 2576
+        y: 722
         width: 160
         height: 30
     - id: 83
@@ -20144,7 +19978,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: (You somehow understand that the only way to uncover the truth about
-          the captain mind, is it go inside of his mind.)
+          the captain, is it go inside of his mind.)
         type: 0
         typeString: 
       - title: Sequence
@@ -20172,8 +20006,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 974
+        x: 2576
+        y: 806
         width: 160
         height: 30
     - id: 84
@@ -20227,8 +20061,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 1058
+        x: 2576
+        y: 890
         width: 160
         height: 30
     - id: 85
@@ -20254,8 +20088,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: (The clock doesn't answer, but you feel a familliar feeling. It's
-          the same feeling as when Death teleported you in this world.)
+        value: "(The clock doesn't answer, but you feel something \r\nfamiliar. You
+          are about to teleport.)"
         type: 0
         typeString: 
       - title: Sequence
@@ -20283,8 +20117,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 1142
+        x: 2576
+        y: 974
         width: 160
         height: 30
     - id: 86
@@ -20332,8 +20166,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 2368
-        y: 1226
+        x: 2576
+        y: 1058
         width: 160
         height: 30
     - id: 87
@@ -20829,9 +20663,125 @@ MonoBehaviour:
         y: 1646
         width: 160
         height: 30
+    - id: 96
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 10
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Are you awake?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 96
+        destinationConversationID: 9
+        destinationDialogueID: 97
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2056
+        y: 218
+        width: 160
+        height: 30
+    - id: 97
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 10
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: (He doesn't respond, you see that his eyes are closed.)
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 9
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 9
+        originDialogueID: 97
+        destinationConversationID: 9
+        destinationDialogueID: 48
+        isConnector: 0
+        priority: 2
+      - originConversationID: 9
+        originDialogueID: 97
+        destinationConversationID: 9
+        destinationDialogueID: 47
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 2056
+        y: 302
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 300.3687, y: 351.4898}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 1858.8191, y: 193.70273}
+    canvasZoom: 0.9100001
   - id: 10
     fields:
     - title: Title
@@ -21227,11 +21177,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 11
         type: 5
@@ -21243,15 +21193,19 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: (You obtained the key)
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 23267c2d-77bb-4e4e-92fa-9b217f5ff515
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -21275,7 +21229,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 288
+        x: 288.9709
         y: 470
         width: 160
         height: 30
@@ -21378,8 +21332,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.03
+    canvasScrollPosition: {x: 0, y: 148.86362}
+    canvasZoom: 0.8800001
   - id: 11
     fields:
     - title: Title
@@ -26356,8 +26310,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 242.29321, y: 42.104797}
-    canvasZoom: 0.7600002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.5800004
   - id: 13
     fields:
     - title: Title
@@ -32046,8 +32000,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 931.52783, y: 2893.0867}
-    canvasZoom: 0.94000006
+    canvasScrollPosition: {x: 1074.1746, y: 30.487793}
+    canvasZoom: 0.8200002
   - id: 15
     fields:
     - title: Title
@@ -34283,7 +34237,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: He did. It was hard, but he values orders above anything else.
+        value: He doesn't care. He is willing to do whatever is neccesary to complete
+          his orders.
         type: 0
         typeString: 
       - title: Sequence
@@ -34339,7 +34294,7 @@ MonoBehaviour:
         typeString: 
       - title: Dialogue Text
         value: (Maybe if I tell someone that the captain is responsible for the loss
-          of the other ship, then someone would help me.)
+          of the other ship, then they would help me.)
         type: 0
         typeString: 
       - title: Sequence
@@ -34696,8 +34651,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 532.72974}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 0.9434204, y: 1037.9435}
+    canvasZoom: 1.06
   - id: 17
     fields:
     - title: Title

@@ -2182,12 +2182,6 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 2
-        originDialogueID: 1
-        destinationConversationID: 2
-        destinationDialogueID: 81
-        isConnector: 0
-        priority: 2
       conditionsString: Variable["isGotMagicClock"] == false and (Variable["isDutchmanCaptainWaitingForResults"]
         == false)
       userScript: 
@@ -6465,55 +6459,6 @@ MonoBehaviour:
         y: 722
         width: 160
         height: 30
-    - id: 81
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: '[Testing]'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 2
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: EndGame()
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 288
-        y: 218
-        width: 160
-        height: 30
     - id: 82
       fields:
       - title: Title
@@ -6620,7 +6565,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 334.4596}
+    canvasScrollPosition: {x: 1.369873, y: 0}
     canvasZoom: 0.73000026
   - id: 3
     fields:
@@ -7049,7 +6994,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: GetIsBridgeBuilt()  == false and and (Variable["isDutchmanCaptainWaitingForResults"]
+      conditionsString: GetIsBridgeBuilt()  == false and (Variable["isDutchmanCaptainWaitingForResults"]
         == true)
       userScript: 
       onExecute:
@@ -8533,7 +8478,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 86.001495, y: 0}
+    canvasScrollPosition: {x: 0, y: 36.476017}
     canvasZoom: 0.8800001
   - id: 5
     fields:
@@ -21232,11 +21177,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 11
         type: 5
@@ -21248,19 +21193,19 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
         value: (You obtained the key)
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: EventGuid
         value: 23267c2d-77bb-4e4e-92fa-9b217f5ff515
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -21281,19 +21226,7 @@ MonoBehaviour:
         SetIsGotKey(true)'
       onExecute:
         m_PersistentCalls:
-          m_Calls:
-          - m_Target: {fileID: 919132149155446097, guid: 759395d7ca5ddd34281324b656d4002f, type: 3}
-            m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_MethodName: SetActive
-            m_Mode: 6
-            m_Arguments:
-              m_ObjectArgument: {fileID: 0}
-              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-              m_IntArgument: 0
-              m_FloatArgument: 0
-              m_StringArgument: 
-              m_BoolArgument: 0
-            m_CallState: 2
+          m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 288.9709
@@ -21399,8 +21332,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 157.47453}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 0, y: 148.86362}
+    canvasZoom: 0.8800001
   - id: 11
     fields:
     - title: Title
