@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GreenMagicNight
+  m_Name: ChainMagic
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ValidKeywords:
   - _EMISSION
@@ -109,9 +109,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.3043704, g: 0.7075472, b: 0.15619436, a: 0.36862746}
-    - _Color: {r: 0.30437037, g: 0.7075471, b: 0.15619433, a: 0.36862746}
-    - _EmissionColor: {r: 0.05275897, g: 0.5377358, b: 0.07897392, a: 1}
+    - _BaseColor: {r: 0.8113208, g: 0.12552504, b: 0.16836013, a: 1}
+    - _Color: {r: 0.8113207, g: 0.125525, b: 0.16836008, a: 1}
+    - _EmissionColor: {r: 0.94506603, g: 0.20682445, b: 0.12838627, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4310661480947527199
