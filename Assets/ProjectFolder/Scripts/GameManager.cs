@@ -103,6 +103,15 @@ public class GameManager : MonoBehaviour
         capsule.SetActive(true);
     }
 
+    /*public void TurnOffClock()
+    {
+        if (GameObject.Find("Magic_Clock")
+        {
+
+
+        }
+    }*/
+
     //Methods transition to Lua
     private void OnEnable()
     {

@@ -283,7 +283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -764,7 +764,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1236,7 +1236,7 @@ MonoBehaviour:
   stopConversationIfTooFar: 0
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
+  showCursorDuringConversation: 1
   pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
@@ -1497,7 +1497,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2149,15 +2149,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeac48ba3b11e2441853a140152ad93b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.45
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeac48ba3b11e2441853a140152ad93b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.45
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeac48ba3b11e2441853a140152ad93b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.45
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeac48ba3b11e2441853a140152ad93b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2320,7 +2320,7 @@ MonoBehaviour:
   stopConversationIfTooFar: 0
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
+  showCursorDuringConversation: 1
   pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
@@ -3365,7 +3365,7 @@ MonoBehaviour:
     onConversationEnd:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1014729264}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -3729,7 +3729,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4398,7 +4398,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5163,7 +5163,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5676,7 +5676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 759395d7ca5ddd34281324b656d4002f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.774
+      value: -3.851
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 759395d7ca5ddd34281324b656d4002f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6243,7 +6243,7 @@ MonoBehaviour:
   stopConversationIfTooFar: 0
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
+  showCursorDuringConversation: 1
   pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
@@ -6623,7 +6623,7 @@ MonoBehaviour:
   stopConversationIfTooFar: 0
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
+  showCursorDuringConversation: 1
   pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
@@ -6842,7 +6842,7 @@ MonoBehaviour:
   stopConversationIfTooFar: 0
   maxConversationDistance: 5
   monitorConversationDistanceFrequency: 1
-  showCursorDuringConversation: 0
+  showCursorDuringConversation: 1
   pauseGameDuringConversation: 0
   setActiveActions: []
   setEnabledActions: []
@@ -7076,6 +7076,96 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 8d4c4cbc6591d694d9417c6da88663b1, type: 2}
+--- !u!114 &1587267360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587267354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationEvents:
+    onConversationStart:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: 
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    onConversationEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    runOnConversationEndEventsAtEndOfFrame: 0
+    onConversationCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationLine:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationLineEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationLineCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationResponseMenu:
+      m_PersistentCalls:
+        m_Calls: []
+    onConversationResponseMenuTimeout:
+      m_PersistentCalls:
+        m_Calls: []
+    onLinkedConversationStart:
+      m_PersistentCalls:
+        m_Calls: []
+  barkEvents:
+    onBarkStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onBarkEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    onBarkLine:
+      m_PersistentCalls:
+        m_Calls: []
+  sequenceEvents:
+    onSequenceStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onSequenceEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  questEvents:
+    onQuestStateChange:
+      m_PersistentCalls:
+        m_Calls: []
+    onQuestTrackingEnabled:
+      m_PersistentCalls:
+        m_Calls: []
+    onQuestTrackingDisabled:
+      m_PersistentCalls:
+        m_Calls: []
+    onUpdateQuestTracker:
+      m_PersistentCalls:
+        m_Calls: []
+  pauseEvents:
+    onDialogueSystemPause:
+      m_PersistentCalls:
+        m_Calls: []
+    onDialogueSystemUnpause:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &1635301270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7289,7 +7379,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9001,7 +9091,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10037,7 +10127,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10249,7 +10339,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10310,7 +10400,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10367,7 +10457,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10521,7 +10611,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10754,7 +10844,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10860,7 +10950,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10948,7 +11038,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11283,7 +11373,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41cc3035e2b717c4fb43115c7077c21a, type: 2}
+  - {fileID: 2100000, guid: 539ba0a408cd51344b39af0d31921968, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
