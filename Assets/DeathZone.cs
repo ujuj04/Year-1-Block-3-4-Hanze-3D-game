@@ -19,7 +19,7 @@ public class DeathZone : MonoBehaviour
     {
         SceneManager.LoadScene("DeathZone");
         capsule.SetActive(false);
-        capsule.transform.position = new Vector3(-37.15f, 12.86f, -20.01f);
+        capsule.transform.position = new Vector3(-40f, 12.86f, -5.01f);
         
         //mainCamera.transform.localEulerAngles = new Vector3(0, 135, 0);
         capsule.SetActive(true); 
