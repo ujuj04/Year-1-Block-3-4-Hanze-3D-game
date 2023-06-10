@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject worldChangesDay;
     [SerializeField] private GameObject magicClock;
     [SerializeField] private GameObject deathZone;
+    [SerializeField] private Canvas canvas;
     [SerializeField] GameObject capsule;
     public bool isDay = true;
     public bool mazeIsDay = true;
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(dialogueManager);
         DontDestroyOnLoad(worldChangesDay);
         DontDestroyOnLoad(deathZone);
+        DontDestroyOnLoad(canvas);
         Application.targetFrameRate = 60;
     }
 
@@ -99,8 +101,14 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("DeathZone");
         capsule.SetActive(false);
-        capsule.transform.position = new Vector3(-37.15f, 12.86f, -20.01f);
+        capsule.transform.position = new Vector3(-68f, 1.2f, -5f);
         capsule.SetActive(true);
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+        player.SetActive(false);
     }
 
     /*public void TurnOffClock()
@@ -130,5 +138,6 @@ public class GameManager : MonoBehaviour
         Lua.RegisterFunction("TpFromCaptainDream", this, SymbolExtensions.GetMethodInfo(() => TpFromCaptainDream()));
         Lua.RegisterFunction("GetIsDeathZone", this, SymbolExtensions.GetMethodInfo(() => GetIsDeathZone()));
         Lua.RegisterFunction("EndGame", this, SymbolExtensions.GetMethodInfo(() => EndGame()));
+        Lua.RegisterFunction("Credits", this, SymbolExtensions.GetMethodInfo(() => Credits()));
     }
 }

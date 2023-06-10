@@ -4,45 +4,67 @@ using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using PixelCrushers.DialogueSystem;
+using Cinemachine;
+using StarterAssets;
 
 public class ClockLogic : MonoBehaviour
 {
     //[SerializeField] public SceneInfo sceneInfo; 
     [SerializeField] public GameManager gameManager;
+    [SerializeField] RectTransform fader;
+    [SerializeField] FirstPersonController controller;
+    private string sceneToLoad = "";
+
     void Update()
     {
+
         //Move between Day/Night Scenes
+
         if (Input.GetKeyDown(KeyCode.T) && SceneManager.GetActiveScene().name != "Hub" && SceneManager.GetActiveScene().name != "DeathZone" && !PixelCrushers.DialogueSystem.DialogueManager.isConversationActive)
         {
             if (SceneManager.GetActiveScene().name == "DayTime" || SceneManager.GetActiveScene().name == "NightTime")
                 if (gameManager.isDay == true)
                 {
-                    SceneManager.LoadScene("NightTime");
-                    Cursor.visible = false;
+                    sceneToLoad = "NightTime";
                     gameManager.isDay = false;
                 }
                 else
                 {
-                    SceneManager.LoadScene("DayTime");
-                    Cursor.visible = false;
+                    sceneToLoad = "DayTime";
                     gameManager.isDay = true;
-                }    
+                }
             if (SceneManager.GetActiveScene().name == "Maze_DayTime" || SceneManager.GetActiveScene().name == "Maze_NightTime")
                 if (gameManager.mazeIsDay == true)
                 {
-                    Debug.Log("2");
-                    SceneManager.LoadScene("Maze_NightTime");
-                    Cursor.visible = false;
+                    sceneToLoad = "Maze_NightTime";
                     gameManager.mazeIsDay = false;
                 }
                 else
                 {
-                    Debug.Log("1");
-                    SceneManager.LoadScene("Maze_DayTime");
-                    Cursor.visible = false;
+                    sceneToLoad = "Maze_DayTime";
                     gameManager.mazeIsDay = true;
-                }     
+                }
+            LoadSceneAndPlayAnimation();
         }
+    }
+    private void LoadSceneAndPlayAnimation()
+    {
 
+        //Disable player movement
+        controller.enabled = false;
+
+        fader.gameObject.SetActive(true);
+        LeanTween.scale(fader, Vector3.zero, 0f);
+        LeanTween.rotate(fader, Vector3.zero, 0f);
+        LeanTween.rotateAround(fader, Vector3.forward, -360, 0.7f);
+        LeanTween.scale(fader, new Vector3 (1, 1, 1), 0.7f).setEase(LeanTweenType.easeInExpo).setOnComplete(() => {
+            SceneManager.LoadScene(sceneToLoad);
+            LeanTween.scale(fader, Vector3.zero, 0.7f).setEase(LeanTweenType.easeOutQuad);
+            LeanTween.rotateAround(fader, Vector3.forward, 360, 0.7f).setOnComplete(() =>
+            {
+                //Enable player movement
+                controller.enabled = true;
+            } );
+        });
     }
 }

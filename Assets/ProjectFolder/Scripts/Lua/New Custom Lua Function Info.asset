@@ -56,3 +56,6 @@ MonoBehaviour:
   - functionName: EndGame
     parameters: 
     returnValue: 0
+  - functionName: Credits
+    parameters: 
+    returnValue: 0
