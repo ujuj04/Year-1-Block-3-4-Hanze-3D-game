@@ -12311,7 +12311,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 421.59103, y: 0}
+    canvasScrollPosition: {x: 0, y: 2445.1206}
     canvasZoom: 0.8200002
   - id: 6
     fields:
