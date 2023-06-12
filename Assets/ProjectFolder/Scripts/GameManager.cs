@@ -111,14 +111,10 @@ public class GameManager : MonoBehaviour
         player.SetActive(false);
     }
 
-    /*public void TurnOffClock()
+    public void PlayVoiceLines()
     {
-        if (GameObject.Find("Magic_Clock")
-        {
-
-
-        }
-    }*/
+        FindObjectOfType<SAudioManager>().Play("Mumbling");
+    }
 
     //Methods transition to Lua
     private void OnEnable()
@@ -139,5 +135,6 @@ public class GameManager : MonoBehaviour
         Lua.RegisterFunction("GetIsDeathZone", this, SymbolExtensions.GetMethodInfo(() => GetIsDeathZone()));
         Lua.RegisterFunction("EndGame", this, SymbolExtensions.GetMethodInfo(() => EndGame()));
         Lua.RegisterFunction("Credits", this, SymbolExtensions.GetMethodInfo(() => Credits()));
+        Lua.RegisterFunction("PlayVoiceLines", this, SymbolExtensions.GetMethodInfo(() => PlayVoiceLines()));
     }
 }

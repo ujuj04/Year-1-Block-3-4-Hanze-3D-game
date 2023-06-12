@@ -14,13 +14,14 @@ public class ClockLogic : MonoBehaviour
     [SerializeField] RectTransform fader;
     [SerializeField] FirstPersonController controller;
     private string sceneToLoad = "";
+    public bool isAnimPlaying = false;
 
     void Update()
     {
 
         //Move between Day/Night Scenes
-
-        if (Input.GetKeyDown(KeyCode.T) && SceneManager.GetActiveScene().name != "Hub" && SceneManager.GetActiveScene().name != "DeathZone" && !PixelCrushers.DialogueSystem.DialogueManager.isConversationActive)
+        //Check if animation already playing
+        if (isAnimPlaying == false && Input.GetKeyDown(KeyCode.T) && SceneManager.GetActiveScene().name != "Hub" && SceneManager.GetActiveScene().name != "DeathZone" && !PixelCrushers.DialogueSystem.DialogueManager.isConversationActive)
         {
             if (SceneManager.GetActiveScene().name == "DayTime" || SceneManager.GetActiveScene().name == "NightTime")
                 if (gameManager.isDay == true)
@@ -53,6 +54,11 @@ public class ClockLogic : MonoBehaviour
         //Disable player movement
         controller.enabled = false;
 
+        //Check if animation already playing
+        isAnimPlaying= true;
+
+        FindObjectOfType<SAudioManager>().Play("TimeSwitch");
+
         fader.gameObject.SetActive(true);
         LeanTween.scale(fader, Vector3.zero, 0f);
         LeanTween.rotate(fader, Vector3.zero, 0f);
@@ -64,6 +70,8 @@ public class ClockLogic : MonoBehaviour
             {
                 //Enable player movement
                 controller.enabled = true;
+                isAnimPlaying= false;
+                fader.gameObject.SetActive(false);
             } );
         });
     }
