@@ -12,11 +12,11 @@ public class MainMenuLogic : MonoBehaviour
         //Move from main menu to Game
         if (Input.GetKey(KeyCode.KeypadEnter))
         {
-            SceneManager.LoadScene("DayTime");
+            //SceneManager.LoadScene("DayTime");
         }
         if (Input.GetKey(KeyCode.Keypad0))
         {
-            SceneManager.LoadScene("Maze_DayTime");
+            //SceneManager.LoadScene("Maze_DayTime");
         }
     }
 }

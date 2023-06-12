@@ -49,7 +49,7 @@ public partial class SAudioManager : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         string loadedSceneName = scene.name;
-        if (loadedSceneName == "DayTime" || loadedSceneName == "NightTime")
+        if (loadedSceneName == "DayTime" || loadedSceneName == "NightTime" || loadedSceneName == "Credits")
         {
             Stop("MusicMazeAndHub");
             isMusicMazeAndHub = false;

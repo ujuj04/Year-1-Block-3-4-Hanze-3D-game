@@ -5483,11 +5483,15 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 59
+        destinationConversationID: 2
+        destinationDialogueID: 91
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 'Variable["isGameComplete"] = true;
-
-        EndGame()'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7023,9 +7027,60 @@ MonoBehaviour:
         y: 1226
         width: 160
         height: 30
+    - id: 91
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[Leave]'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 'Variable["isGameComplete"] = true;
+
+        EndGame()'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1325.7273
+        y: 1043.3182
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 132.14163, y: 0}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 1616.6498, y: 390.1809}
+    canvasZoom: 0.8800001
   - id: 3
     fields:
     - title: Title
@@ -41027,7 +41082,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Magic clock guard
+        value: Biba
         type: 0
         typeString: 
       - title: Sequence
@@ -41552,7 +41607,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Explosives Guard
+        value: Boba
         type: 0
         typeString: 
       - title: Sequence
@@ -43654,8 +43709,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 3817.588, y: 0}
-    canvasZoom: 0.6100005
+    canvasScrollPosition: {x: 554.3805, y: 344.6475}
+    canvasZoom: 0.8200002
   - id: 20
     fields:
     - title: Title

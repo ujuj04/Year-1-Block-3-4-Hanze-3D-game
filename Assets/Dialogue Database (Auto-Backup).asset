@@ -5483,11 +5483,15 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 59
+        destinationConversationID: 2
+        destinationDialogueID: 91
+        isConnector: 0
+        priority: 2
       conditionsString: 
-      userScript: 'Variable["isGameComplete"] = true;
-
-        EndGame()'
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7023,9 +7027,60 @@ MonoBehaviour:
         y: 1226
         width: 160
         height: 30
+    - id: 91
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: '[Leave]'
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 'Variable["isGameComplete"] = true;
+
+        EndGame()'
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1325.7273
+        y: 1043.3182
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 132.14163, y: 0}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 1154.1499, y: 718.58984}
+    canvasZoom: 0.8800001
   - id: 3
     fields:
     - title: Title
@@ -33043,7 +33098,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1603.0074, y: 81.707275}
+    canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.8200002
   - id: 15
     fields:
@@ -36831,7 +36886,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["isTriedGrog"] = true
+      userScript: 'Variable["isTriedGrog"] = true;
+
+        DrinkGrogVoiceLine()'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -38609,7 +38666,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["isTriedGrog"] = true
+      userScript: 'Variable["isTriedGrog"] = true;
+
+        DrinkGrogVoiceLine()'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -38620,8 +38679,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 220.87909, y: 0}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 295.1219, y: 46.341248}
+    canvasZoom: 0.8200002
   - id: 19
     fields:
     - title: Title
