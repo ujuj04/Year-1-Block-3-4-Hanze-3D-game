@@ -4,10 +4,10 @@ using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
-
 public partial class SAudioManager : MonoBehaviour
 {
-
+    private bool isMusicDutchmanLevelPlaying = false;
+    private bool isMusicMazeAndHub = false;
     public Sound[] sounds;
 
     public static SAudioManager instance;
@@ -48,20 +48,46 @@ public partial class SAudioManager : MonoBehaviour
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("Sound Check");
-
         string loadedSceneName = scene.name;
         if (loadedSceneName == "DayTime" || loadedSceneName == "NightTime")
         {
-            Play("WoodCreaking");
-            Play("Rope");
-            Play("Sails");
+            Stop("MusicMazeAndHub");
+            isMusicMazeAndHub = false;
+            AudioSource[] audioSources = GetComponents<AudioSource>();
+
+            foreach (AudioSource source in audioSources)
+            {
+                if (source.clip != null && source.clip.name == "MusicDutchmanLevel")
+                {
+                    if(source.isPlaying)
+                        isMusicDutchmanLevelPlaying= true;
+                }
+            }
+            if (!isMusicDutchmanLevelPlaying)
+            {
+                Play("MusicDutchmanLevel");
+            }
+            Play("WindSailsRope");
         }
         else
         {
-            Stop("WoodCreaking");
-            Stop("Rope");
-            Stop("Sails");
+            isMusicDutchmanLevelPlaying= false;
+            Stop("WindSailsRope");
+            Stop("MusicDutchmanLevel");
+            AudioSource[] audioSources = GetComponents<AudioSource>();
+
+            foreach (AudioSource source in audioSources)
+            {
+                if (source.clip != null && source.clip.name == "MusicMazeAndHub")
+                {
+                    if (source.isPlaying)
+                        isMusicMazeAndHub = true;
+                }
+            }
+            if (!isMusicMazeAndHub)
+            {
+                Play("MusicMazeAndHub");
+            }
         }
     }
 
@@ -90,5 +116,10 @@ public partial class SAudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
 
         s.source.Stop();
+    }
+
+    public void DialogueTick()
+    {
+        Play("DialogueTickSound");
     }
 }

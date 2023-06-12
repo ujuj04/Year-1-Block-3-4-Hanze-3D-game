@@ -655,9 +655,9 @@ RectTransform:
   m_Father: {fileID: 879407191}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 810, y: -401}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -150, y: -401}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &316213598
@@ -2866,7 +2866,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1508211618}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 956439759}
+        m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.StandardUIResponseButton,
+          Assembly-CSharp-firstpass
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1159626134}
+        m_TargetAssemblyTypeName: SAudioManager, Assembly-CSharp
+        m_MethodName: DialogueTick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &956439758
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2929,6 +2954,7 @@ MonoBehaviour:
   deathZone: {fileID: 653543405}
   canvas: {fileID: 879407190}
   capsule: {fileID: 1092293310}
+  audioManager: {fileID: 1159626134}
   isDay: 1
   mazeIsDay: 1
   isBridgeBuilt: 0
@@ -3242,19 +3268,7 @@ MonoBehaviour:
   sounds:
   - name: WoodCreaking
     clip: {fileID: 8300000, guid: 8fb1e83616909d14e907d6e1cddfc9aa, type: 3}
-    volume: 0.03
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Rope
-    clip: {fileID: 8300000, guid: 8c8246a9b1cdc9b49b478ae2cac58eb5, type: 3}
-    volume: 0.03
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Sails
-    clip: {fileID: 8300000, guid: 0aa135a09f6d8d247a13fa164afca3fa, type: 3}
-    volume: 0.03
+    volume: 0.02
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -3264,10 +3278,94 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Mumbling
-    clip: {fileID: 8300000, guid: 96a4c6f488b7a1646b82ed230d4e11d1, type: 3}
+  - name: DeathVoiceLine
+    clip: {fileID: 8300000, guid: 327fb727a564cb74b9823f754d3f39de, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DutchmanCaptainVoiceLine
+    clip: {fileID: 8300000, guid: d8596777cee0ebc4b916264d8c178357, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DrunkSkeletonVoiceLine
+    clip: {fileID: 8300000, guid: 7dc90c3e3b9b2b244bb5fc3abd51cb8b, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: HumansVoiceLine
+    clip: {fileID: 8300000, guid: 48ae599ec372368498d74829b05f7751, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BridgerVoiceLine
+    clip: {fileID: 8300000, guid: d6ef57becafec664ab3b5cc177f13aab, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GuardsVoiceLine
+    clip: {fileID: 8300000, guid: ab2abead7b8bda4448fe401e2aa8798f, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnglishCaptainVoiceLine
+    clip: {fileID: 8300000, guid: 93dd7f81fd6bc2c42b08f99699c5234a, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PoetVoiceLine
+    clip: {fileID: 8300000, guid: 2af0c078f9a85bb44b885293bbc579b2, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RichVoiceLine
+    clip: {fileID: 8300000, guid: 5d6775376e01ebe4e9481452fbf4b120, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: QuackettyVoiceLine
+    clip: {fileID: 8300000, guid: 9d5737cc5f535124caeb56aa6a9aeab2, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WindSailsRope
+    clip: {fileID: 8300000, guid: 14b6b4725ae5aca4a95d57297758c518, type: 3}
+    volume: 0.04
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MusicDutchmanLevel
+    clip: {fileID: 8300000, guid: b16eeb5536354084fb06ffb3d1ca33ab, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MusicMazeAndHub
+    clip: {fileID: 8300000, guid: 430bdcd173e3d4447ab7acd31252ce11, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: DrinkGrogVoiceLine
+    clip: {fileID: 8300000, guid: 98a582097dc17c644a00107502780f00, type: 3}
     volume: 0.2
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DialogueTickSound
+    clip: {fileID: 8300000, guid: e3170c00b2706f140bb34e73e1588759, type: 3}
+    volume: 0.5
+    pitch: 0.6
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1159626135
@@ -9905,7 +10003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Death
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -10115,7 +10213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1964169138}
   m_LocalRotation: {x: 0, y: -0.93840265, z: 0, w: 0.34554386}
-  m_LocalPosition: {x: -211.1, y: -2.1, z: -33.88}
+  m_LocalPosition: {x: -186.96, y: -2.1, z: -45.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11156,13 +11254,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 963d6358c55a0f44d8de57bee560f184, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useDefaultGUI: 0
+  useDefaultGUI: 1
   guiSkin: {fileID: 11400000, guid: dbe874f440d0cf84cb5c28fd70e8123c, type: 2}
   guiStyleName: label
   alignment: 1
-  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  color: {r: 1, g: 1, b: 1, a: 1}
   textStyle: 2
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  textStyleColor: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   defaultUseMessage: (Press E to interact)
   useKey: 101
   useButton: 

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject deathZone;
     [SerializeField] private Canvas canvas;
     [SerializeField] GameObject capsule;
+    [SerializeField] SAudioManager audioManager;
     public bool isDay = true;
     public bool mazeIsDay = true;
     public bool isBridgeBuilt = false;
@@ -99,10 +100,10 @@ public class GameManager : MonoBehaviour
     //Tp player to the end game
     public void EndGame()
     {
-        SceneManager.LoadScene("DeathZone");
         capsule.SetActive(false);
-        capsule.transform.position = new Vector3(-68f, 1.2f, -5f);
+        capsule.transform.position = new Vector3(-40f, 12.86f, -5.01f);
         capsule.SetActive(true);
+        SceneManager.LoadScene("DeathZone"); 
     }
 
     public void Credits()
@@ -111,9 +112,49 @@ public class GameManager : MonoBehaviour
         player.SetActive(false);
     }
 
-    public void PlayVoiceLines()
+    public void DeathVoiceLine()
     {
-        FindObjectOfType<SAudioManager>().Play("Mumbling");
+        audioManager.Play("DeathVoiceLine");
+    }
+    public void DutchmanCaptainVoiceLine()
+    {
+        audioManager.Play("DutchmanCaptainVoiceLine");
+    }
+    public void DrunkSkeletonVoiceLine()
+    {
+        audioManager.Play("DrunkSkeletonVoiceLine");
+    }
+    public void HumansVoiceLine()
+    {
+        audioManager.Play("HumansVoiceLine");
+    }
+    public void BridgerVoiceLine()
+    {
+        audioManager.Play("BridgerVoiceLine");
+    }
+    public void GuardsVoiceLine()
+    {
+        audioManager.Play("GuardsVoiceLine");
+    }
+    public void EnglishCaptainVoiceLine()
+    {
+        audioManager.Play("EnglishCaptainVoiceLine");
+    }
+    public void PoetVoiceLine()
+    {
+        audioManager.Play("PoetVoiceLine");
+    }
+    public void RichVoiceLine()
+    {
+        audioManager.Play("RichVoiceLine");
+    }
+    public void QuackettyVoiceLine()
+    {
+        audioManager.Play("QuackettyVoiceLine");
+    }
+    public void DrinkGrogVoiceLine()
+    {
+        audioManager.Play("DrinkGrogVoiceLine");
     }
 
     //Methods transition to Lua
@@ -135,6 +176,16 @@ public class GameManager : MonoBehaviour
         Lua.RegisterFunction("GetIsDeathZone", this, SymbolExtensions.GetMethodInfo(() => GetIsDeathZone()));
         Lua.RegisterFunction("EndGame", this, SymbolExtensions.GetMethodInfo(() => EndGame()));
         Lua.RegisterFunction("Credits", this, SymbolExtensions.GetMethodInfo(() => Credits()));
-        Lua.RegisterFunction("PlayVoiceLines", this, SymbolExtensions.GetMethodInfo(() => PlayVoiceLines()));
+        Lua.RegisterFunction("DeathVoiceLine", this, SymbolExtensions.GetMethodInfo(() => DeathVoiceLine()));
+        Lua.RegisterFunction("DutchmanCaptainVoiceLine", this, SymbolExtensions.GetMethodInfo(() => DutchmanCaptainVoiceLine()));
+        Lua.RegisterFunction("DrunkSkeletonVoiceLine", this, SymbolExtensions.GetMethodInfo(() => DrunkSkeletonVoiceLine()));
+        Lua.RegisterFunction("HumansVoiceLine", this, SymbolExtensions.GetMethodInfo(() => HumansVoiceLine()));
+        Lua.RegisterFunction("BridgerVoiceLine", this, SymbolExtensions.GetMethodInfo(() => BridgerVoiceLine()));
+        Lua.RegisterFunction("GuardsVoiceLine", this, SymbolExtensions.GetMethodInfo(() => GuardsVoiceLine()));
+        Lua.RegisterFunction("EnglishCaptainVoiceLine", this, SymbolExtensions.GetMethodInfo(() => EnglishCaptainVoiceLine()));
+        Lua.RegisterFunction("PoetVoiceLine", this, SymbolExtensions.GetMethodInfo(() => PoetVoiceLine()));
+        Lua.RegisterFunction("RichVoiceLine", this, SymbolExtensions.GetMethodInfo(() => RichVoiceLine()));
+        Lua.RegisterFunction("QuackettyVoiceLine", this, SymbolExtensions.GetMethodInfo(() => QuackettyVoiceLine()));
+        Lua.RegisterFunction("DrinkGrogVoiceLine", this, SymbolExtensions.GetMethodInfo(() => DrinkGrogVoiceLine()));
     }
 }

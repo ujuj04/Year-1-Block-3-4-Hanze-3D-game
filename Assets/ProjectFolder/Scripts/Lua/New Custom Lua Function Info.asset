@@ -59,6 +59,3 @@ MonoBehaviour:
   - functionName: Credits
     parameters: 
     returnValue: 0
-  - functionName: PlayVoiceLines
-    parameters: 
-    returnValue: 0

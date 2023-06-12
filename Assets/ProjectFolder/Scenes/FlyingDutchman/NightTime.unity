@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Golden Key
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Shelf with bottles
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -3538,7 +3538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Chest
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -7097,7 +7097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Biba
   overrideUseMessage: 
   maxUseDistance: 5
   events:
@@ -8568,7 +8568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Old Skeleton
   overrideUseMessage: 
   maxUseDistance: 5
   events:
@@ -8865,7 +8865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Chest
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -9638,7 +9638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Boba
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -11279,7 +11279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Chest
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -13945,7 +13945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Flying Dutchman's Captain
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -14697,7 +14697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Chest
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -15563,7 +15563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Shelf with bottles
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -16614,7 +16614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Drunk Skeleton
   overrideUseMessage: 
   maxUseDistance: 5
   events:
@@ -17951,7 +17951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Captain Brian Braddock
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -18391,43 +18391,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -64.463
+      value: -64.706
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.018
+      value: 7.013
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.205
+      value: -10.197
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9803777
+      value: 0.9971668
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.055674534
+      value: 0.053006902
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.18905112
+      value: -0.050388247
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.004436554
+      value: -0.01759561
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 6.364
+      value: 5.966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 21.869
+      value: -5.907
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.712
+      value: -2.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fea3f75f119d10548b8ab1bccae34b98, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -18529,7 +18529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Poet
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -18622,7 +18622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Chest
   overrideUseMessage: 
   maxUseDistance: 30
   events:
@@ -19957,7 +19957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Chest
   overrideUseMessage: 
   maxUseDistance: 30
   events:

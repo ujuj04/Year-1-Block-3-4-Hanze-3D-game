@@ -1273,6 +1273,7 @@ MonoBehaviour:
   worldChangesDay: {fileID: 0}
   magicClock: {fileID: 0}
   deathZone: {fileID: 0}
+  canvas: {fileID: 0}
   capsule: {fileID: 0}
   isDay: 1
   mazeIsDay: 1
@@ -7062,7 +7063,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 274b80ab5b659c646ba9338870d14625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideName: 
+  overrideName: Death
   overrideUseMessage: 
   maxUseDistance: 30
   events:
